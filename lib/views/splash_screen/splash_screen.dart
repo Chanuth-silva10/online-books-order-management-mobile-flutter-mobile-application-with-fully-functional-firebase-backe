@@ -1,5 +1,6 @@
 import 'package:emart_app/views/auth_screen/login_screen.dart';
 import 'package:get/get.dart';
+// ignore: unnecessary_import
 import '/consts/colors.dart';
 import '/consts/consts.dart';
 import '../../widgets_common/applogo_widget.dart';
