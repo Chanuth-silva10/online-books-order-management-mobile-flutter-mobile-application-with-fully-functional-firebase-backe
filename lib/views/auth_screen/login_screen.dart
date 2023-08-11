@@ -1,5 +1,6 @@
 import 'package:emart_app/widgets_common/applogo_widget.dart';
 import 'package:emart_app/widgets_common/custom_textfield.dart';
+import 'package:emart_app/widgets_common/our_button.dart';
 
 import '/consts/consts.dart';
 import '../../widgets_common/bg_widget.dart';
@@ -23,6 +24,21 @@ class LoginScreen extends StatelessWidget {
               children: [
                 customTextField(hint: emailHint, title: email),
                 customTextField(hint: passwordHint, title: password),
+                Align(
+                    alignment: Alignment.centerRight,
+                    child: TextButton(
+                        onPressed: () {}, child: forgetPass.text.make())),
+                5.heightBox,
+                ourButton(
+                        color: redColor,
+                        title: login,
+                        textColor: whiteColor,
+                        onPress: () {})
+                    .box
+                    .width(context.screenWidth - 50)
+                    .make(),
+                5.heightBox,
+                createNewAccount.text.color(fontGrey).make(),
               ],
             )
                 .box
