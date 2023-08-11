@@ -1,3 +1,5 @@
+import 'package:emart_app/views/auth_screen/login_screen.dart';
+import 'package:get/get.dart';
 import '/consts/colors.dart';
 import '/consts/consts.dart';
 import '../../widgets_common/applogo_widget.dart';
@@ -10,6 +12,19 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  changeScreen() {
+    Future.delayed(const Duration(seconds: 3), () {
+      //using getx
+      Get.to(() => const LoginScreen());
+    });
+  }
+
+  @override
+  void initState() {
+    changeScreen();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
