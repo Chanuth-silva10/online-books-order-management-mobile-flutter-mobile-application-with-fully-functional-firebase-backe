@@ -1,10 +1,10 @@
-import 'package:emart_app/consts/lists.dart';
+import 'package:emart_app/views/auth_screen/signup_screen.dart';
 import 'package:emart_app/widgets_common/applogo_widget.dart';
 import 'package:emart_app/widgets_common/custom_textfield.dart';
 import 'package:emart_app/widgets_common/our_button.dart';
 import 'package:emart_app/consts/consts.dart';
 import 'package:emart_app/widgets_common/bg_widget.dart';
-import 'package:emart_app/widgets_common/bg_widget.dart';
+import 'package:get/get.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -43,32 +43,12 @@ class LoginScreen extends StatelessWidget {
                 createNewAccount.text.color(fontGrey).make(),
                 5.heightBox,
                 ourButton(
-                        color: lightGolden,
-                        title: signup,
-                        textColor: redColor,
-                        onPress: () {})
-                    .box
-                    .width(context.screenWidth - 50)
-                    .make(),
-                10.heightBox,
-                loginWith.text.color(fontGrey).make(),
-                5.heightBox,
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: List.generate(
-                      3,
-                      (index) => Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: CircleAvatar(
-                              backgroundColor: lightGrey,
-                              radius: 25,
-                              child: Image.asset(
-                                socialIconList[index],
-                                width: 30,
-                              ),
-                            ),
-                          )),
-                )
+                    color: lightGolden,
+                    title: signup,
+                    textColor: redColor,
+                    onPress: () {
+                      Get.to(() => const SignupScreen());
+                    }).box.width(context.screenWidth - 50).make(),
               ],
             )
                 .box
