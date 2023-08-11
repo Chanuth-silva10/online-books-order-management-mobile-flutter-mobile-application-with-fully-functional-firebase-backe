@@ -39,6 +39,18 @@ class LoginScreen extends StatelessWidget {
                     .make(),
                 5.heightBox,
                 createNewAccount.text.color(fontGrey).make(),
+                5.heightBox,
+                ourButton(
+                        color: lightGolden,
+                        title: signup,
+                        textColor: redColor,
+                        onPress: () {})
+                    .box
+                    .width(context.screenWidth - 50)
+                    .make(),
+                10.heightBox,
+                loginWith.text.color(fontGrey).make(),
+                5.heightBox,
               ],
             )
                 .box
